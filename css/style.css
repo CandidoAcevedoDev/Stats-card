@@ -1,0 +1,120 @@
+:root{
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-blue: hsl(244, 38%, 16%);
+    --violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --sligt-white: hsla(0, 0%, 100%, 0.75);
+    --sligh-white: hsla(0, 0%, 100%, 0.6);
+
+    --body-font: 'Inter', sans-serif;
+    --title-font: 'Lexend Deca', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--very-dark-blue);
+    color: white;
+    font-family: var(--body-font);
+}
+
+img{
+    max-width: 100%;
+}
+
+.main{
+    margin: 4rem 2rem 4rem;
+    padding-bottom: 2rem;
+    background-color: var(--dark-blue);
+}
+
+.card{
+    text-align: center;
+}
+
+.card__image{
+    background-image: url('../assets/images/image-header-desktop.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+.card__image::before{
+    content: '';
+    position: absolute;
+    background-color: var(--violet);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .3;
+}
+
+.card__title{
+    font-size: 2.5rem;
+    font-family: var(--title-font);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.card__title--purple{
+    color: var(--violet);
+}
+
+.card__text{
+    font-size: 1.4rem;
+    line-height: 2;
+    color: var(--sligh-white);
+    margin-bottom: 2rem;
+}
+
+.card__statistic{
+    margin-bottom: 2rem;
+}
+
+.card__number{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.card__number--text{
+    display: block;
+    font-size: 1rem;
+    color: var(--sligh-white);
+    letter-spacing: .2em;
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        padding-bottom: 0;
+    }
+
+    .card{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 4rem;
+        text-align: left;
+    }
+
+    .card__image{
+        height: 600px;
+        max-width: 100%;
+        order: 2;
+    }
+
+    .card__data{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .card__number{
+        display: inline-block;
+        margin-right: 4rem;
+    }
+}
+
